@@ -19,7 +19,7 @@ jobs:
           command: |      
             aws configure set aws_access_key_id "${AWS_DEV_ACCESS_KEY}"
             aws configure set aws_secret_access_key "${AWS_DEV_SECRET_KEY}"   
-            BUCKET="mono-cdn"
+            BUCKET="monosolutions-cdn"
             {
                 aws s3api create-bucket --bucket "${BUCKET}"
                 } || {
