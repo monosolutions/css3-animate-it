@@ -1,4 +1,4 @@
-.rollIn {
+.@{prefix}rollIn {
   .opacity;
 }
 
@@ -8,12 +8,12 @@
 
 .rollIn-frames() {
   0% {
-    .rotate( -120deg );
+    .rotateX( -120deg );
     .translateX( -100% );
     .opacity;
   }
   100% {
-    .rotate( 0 );
+    .rotateX( 0 );
     .translateX( 0 );
     .opacity( 1 );
   }
@@ -27,6 +27,6 @@
   .rollIn-frames;
 }
 
-.rollIn.go {
+.@{prefix}rollIn.@{prefix}go {
   .animation( rollIn );
 }

@@ -1,7 +1,8 @@
-.lightSpeedInRight,
-.lightSpeedInLeft {
+.@{prefix}lightSpeedInRight,
+.@{prefix}lightSpeedInLeft {
   .opacity;
   .translateX( 400px );
+  
 }
 
 /***************
@@ -39,7 +40,7 @@
   .lightSpeedInLeft-frames;
 }
 
-.lightSpeedInLeft.go {
+.@{prefix}lightSpeedInLeft.@{prefix}go {
   .animation( lightSpeedInLeft );
   .animation-timing( ease-out );
 }
@@ -79,7 +80,7 @@
   .lightSpeedInRight-frames;
 }
 
-.lightSpeedInRight.go {
+.@{prefix}lightSpeedInRight.@{prefix}go {
   .animation( lightSpeedInRight );
   .animation-timing( ease-out );
 }

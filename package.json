@@ -8,6 +8,9 @@
     "plugins",
     "animate"
   ],
+  "scripts":{
+    "build": "lessc ./less/animations.less ./animations.css"
+  },
   "version": "1.0.3",
   "author": {
     "name": "Jack McCourt",
@@ -24,6 +27,7 @@
   "docs": "http://css3-animate-it.jackonthe.net/",
   "download": "https://github.com/Jack-McCourt/css3-animate-it.git",
   "dependencies": {
-    "jquery": ">=1.4"
+    "jquery": ">=1.4",
+    "less": "^3.0.1"
   }
 }

@@ -4,12 +4,12 @@
 
 .rotateOut-frames() {
   0% {
-    .rotate( 0 );
+    .rotateX( 0 );
     .transform-origin( center center );
     .opacity( 1 );
   }
   100% {
-    .rotate( 200deg );
+    .rotateX( 200deg );
     .transform-origin( center center );
     .opacity;
   }
@@ -23,7 +23,7 @@
   .rotateOut-frames;
 }
 
-.rotateOut.go {
+.@{prefix}rotateOut.@{prefix}go {
   .animation( rotateOut );
 }
 
@@ -33,12 +33,12 @@
 
 .rotateOutUpLeft-frames() {
   0% {
-    .rotate( 0 );
+    .rotateX( 0 );
     .transform-origin( left bottom );
     .opacity( 1 );
   }
   100% {
-    .rotate( -90deg );
+    .rotateX( -90deg );
     .transform-origin( left bottom );
     .opacity;
   }
@@ -52,7 +52,7 @@
   .rotateOutUpLeft-frames;
 }
 
-.rotateOutUpLeft.go {
+.@{prefix}rotateOutUpLeft.@{prefix}go {
   .animation( rotateOutUpLeft );
 }
 
@@ -62,12 +62,12 @@
 
 .rotateOutDownLeft-frames() {
   0% {
-    .rotate( 0 );
+    .rotateX( 0 );
     .transform-origin( left bottom );
     .opacity( 1 );
   }
   100% {
-    .rotate( 90deg );
+    .rotateX( 90deg );
     .transform-origin( left bottom );
     .opacity;
   }
@@ -81,7 +81,7 @@
   .rotateOutDownLeft-frames;
 }
 
-.rotateOutDownLeft.go {
+.@{prefix}rotateOutDownLeft.@{prefix}go {
   .animation( rotateOutDownLeft );
 }
 
@@ -91,12 +91,12 @@
 
 .rotateOutUpRight-frames() {
   0% {
-    .rotate( 0 );
+    .rotateX( 0 );
     .transform-origin( right bottom );
     .opacity( 1 );
   }
   100% {
-    .rotate( 90deg );
+    .rotateX( 90deg );
     .transform-origin( right bottom );
     .opacity;
   }
@@ -110,6 +110,6 @@
   .rotateOutUpRight-frames;
 }
 
-.rotateOutUpRight.go {
+.@{prefix}rotateOutUpRight.@{prefix}go {
   .animation( rotateOutUpRight );
 }

@@ -1,8 +1,8 @@
-.rotateIn,
-.rotateInUpLeft,
-.rotateInUpRight,
-.rotateInDownLeft,
-.rotateDownUpRight {
+.@{prefix}rotateIn,
+.@{prefix}rotateInUpLeft,
+.@{prefix}rotateInUpRight,
+.@{prefix}rotateInDownLeft,
+.@{prefix}rotateDownUpRight {
   .opacity;
 }
 
@@ -12,12 +12,12 @@
 
 .rotateIn-frames() {
   0% {
-    .rotate( -200deg );
+    .rotateX( -200deg );
     .transform-origin( center center );
     .opacity( 0 );
   }
   100% {
-    .rotate;
+    .rotateX;
     .transform-origin( center center );
     .opacity( 1 );
   }
@@ -31,7 +31,7 @@
   .rotateIn-frames;
 }
 
-.rotateIn.go {
+.@{prefix}rotateIn.@{prefix}go {
   .animation( rotateIn );
 }
 
@@ -41,12 +41,12 @@
 
 .rotateInUpLeft-frames() {
   0% {
-    .rotate( 90deg );
+    .rotateX( 90deg );
     .transform-origin( left bottom );
     .opacity( 0 );
   }
   100% {
-    .rotate( 0deg );
+    .rotateX( 0deg );
     .transform-origin( left bottom );
     .opacity( 1 );
   }
@@ -60,7 +60,7 @@
   .rotateInUpLeft-frames;
 }
 
-.rotateInUpLeft.go {
+.@{prefix}rotateInUpLeft.@{prefix}go {
   .animation( rotateInUpLeft );
 }
 
@@ -70,12 +70,12 @@
 
 .rotateInDownLeft-frames() {
   0% {
-    .rotate( -90deg );
+    .rotateX( -90deg );
     .transform-origin( left bottom );
     .opacity( 1 );
   }
   100% {
-    .rotate( 0deg );
+    .rotateX( 0deg );
     .transform-origin( left bottom );
     .opacity;
   }
@@ -89,7 +89,7 @@
   .rotateInDownLeft-frames;
 }
 
-.rotateInDownLeft.go {
+.@{prefix}rotateInDownLeft.@{prefix}go {
   .animation( rotateInDownLeft );
 }
 
@@ -99,12 +99,12 @@
 
 .rotateInUpRight-frames() {
   0% {
-    .rotate( -90deg );
+    .rotateX( -90deg );
     .transform-origin( right bottom );
     .opacity;
   }
   100% {
-    .rotate( 0deg );
+    .rotateX( 0deg );
     .transform-origin( right bottom );
     .opacity( 1 );
   }
@@ -118,7 +118,7 @@
   .rotateInUpRight-frames;
 }
 
-.rotateInUpRight.go {
+.@{prefix}rotateInUpRight.@{prefix}go {
   .animation( rotateInUpRight );
 }
 
@@ -128,12 +128,12 @@
 
 .rotateInDownRight-frames() {
   0% {
-    .rotate( 90deg );
+    .rotateX( 90deg );
     .transform-origin( right bottom );
     .opacity;
   }
   100% {
-    .rotate( 0deg );
+    .rotateX( 0deg );
     .transform-origin( right bottom );
     .opacity( 1 );
   }
@@ -147,6 +147,6 @@
   .rotateInDownRight-frames;
 }
 
-.rotateInDownRight.go {
+.@{prefix}rotateInDownRight.@{prefix}go {
   .animation( rotateInDownRight );
 }

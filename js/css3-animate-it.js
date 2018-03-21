@@ -1,7 +1,7 @@
 /*
  * CSS3 Animate it
  * Copyright (c) 2014 Jack McCourt
- * https://github.com/kriegar/css3-animate-it
+ * https://github.com/kriegar/css3-cc_animate-it
  * Version: 0.1.0
  * 
  * I utilise the jQuery.appear plugin within this javascript file so here is a link to that too
@@ -395,8 +395,8 @@
 
 
 //CSS3 Animate-it
-$('.animatedParent').appear();
-$('.animatedClick').click(function(){
+$('.cc_animatedParent').appear();
+$('.cc_animatedClick').click(function(){
   var target = $(this).attr('data-target');
 
   
@@ -406,12 +406,12 @@ $('.animatedClick').click(function(){
     var number = firstId;
 
     //Add or remove the class
-    if($("."+target+"[data-id="+ number +"]").hasClass('go')){
-      $("."+target+"[data-id="+ number +"]").addClass('goAway');
-      $("."+target+"[data-id="+ number +"]").removeClass('go');
+    if($("."+target+"[data-id="+ number +"]").hasClass('cc_go')){
+      $("."+target+"[data-id="+ number +"]").addClass('cc_goAway');
+      $("."+target+"[data-id="+ number +"]").removeClass('cc_go');
     }else{
-      $("."+target+"[data-id="+ number +"]").addClass('go');
-      $("."+target+"[data-id="+ number +"]").removeClass('goAway');
+      $("."+target+"[data-id="+ number +"]").addClass('cc_go');
+      $("."+target+"[data-id="+ number +"]").removeClass('cc_goAway');
     }
     number ++;
     delay = Number($(this).attr('data-sequence'));
@@ -419,12 +419,12 @@ $('.animatedClick').click(function(){
       console.log(lastId);
       
       //Add or remove the class
-      if($("."+target+"[data-id="+ number +"]").hasClass('go')){
-        $("."+target+"[data-id="+ number +"]").addClass('goAway');
-        $("."+target+"[data-id="+ number +"]").removeClass('go');
+      if($("."+target+"[data-id="+ number +"]").hasClass('cc_go')){
+        $("."+target+"[data-id="+ number +"]").addClass('cc_goAway');
+        $("."+target+"[data-id="+ number +"]").removeClass('cc_go');
       }else{
-        $("."+target+"[data-id="+ number +"]").addClass('go');
-        $("."+target+"[data-id="+ number +"]").removeClass('goAway');
+        $("."+target+"[data-id="+ number +"]").addClass('cc_go');
+        $("."+target+"[data-id="+ number +"]").removeClass('cc_goAway');
       }
 
       //increment
@@ -434,45 +434,45 @@ $('.animatedClick').click(function(){
       if(number <= lastId){return true;}
     });
   }else{
-    if($('.'+target).hasClass('go')){
-      $('.'+target).addClass('goAway');
-      $('.'+target).removeClass('go');
+    if($('.'+target).hasClass('cc_go')){
+      $('.'+target).addClass('cc_goAway');
+      $('.'+target).removeClass('cc_go');
     }else{
-      $('.'+target).addClass('go');
-      $('.'+target).removeClass('goAway');
+      $('.'+target).addClass('cc_go');
+      $('.'+target).removeClass('cc_goAway');
     }
   } 
 });
 
-$(document.body).on('appear', '.animatedParent', function(e, $affected){
-  var ele = $(this).find('.animated');
+$(document.body).on('appear', '.cc_animatedParent', function(e, $affected){
+  var ele = $(this).find('.cc_animated');
   var parent = $(this);
   
 
   if(parent.attr('data-sequence') != undefined){
     
-    var firstId = $(this).find('.animated:first').attr('data-id');
+    var firstId = $(this).find('.cc_animated:first').attr('data-id');
     var number = firstId;
-    var lastId = $(this).find('.animated:last').attr('data-id');
+    var lastId = $(this).find('.cc_animated:last').attr('data-id');
 
-    $(parent).find(".animated[data-id="+ number +"]").addClass('go');
+    $(parent).find(".cc_animated[data-id="+ number +"]").addClass('cc_go');
     number ++;
     delay = Number(parent.attr('data-sequence'));
 
     $.doTimeout(delay, function(){
-      $(parent).find(".animated[data-id="+ number +"]").addClass('go');
+      $(parent).find(".cc_animated[data-id="+ number +"]").addClass('cc_go');
       ++number;
       if(number <= lastId){return true;}
     });
   }else{
-    ele.addClass('go');
+    ele.addClass('cc_go');
   }
   
 });
 
- $(document.body).on('disappear', '.animatedParent', function(e, $affected) {
-  if(!$(this).hasClass('animateOnce')){
-    $(this).find('.animated').removeClass('go');
+ $(document.body).on('disappear', '.cc_animatedParent', function(e, $affected) {
+  if(!$(this).hasClass('cc_animateOnce')){
+    $(this).find('.cc_animated').removeClass('cc_go');
    }
  });
 

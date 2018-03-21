@@ -2,30 +2,41 @@
 @transition-slower: 2s;
 @transition-slowest: 3s;
 
-.animated {
+
+
+@prefix: cc_;
+
+.@{prefix}animated {
   .transition;
 }
 
-.slow {
+.@{prefix}slow {
   .transition( @transition-slow );
 }
 
-.slower {
+.@{prefix}slower {
   .transition( @transition-slow );
 }
 
-.slowest {
+.@{prefix}slowest {
   .transition( @transition-slow );
 }
+
 
 /*********
 * Mixins *
 *********/
 
+@import "mixins/animation";
+@import "mixins/opacity";
+@import "mixins/perspective";
+@import "mixins/rotate";
+@import "mixins/scale";
+@import "mixins/skew";
 @import "mixins/transform";
 @import "mixins/transition";
 @import "mixins/translate";
-@import "mixins/opacity";
+@import "mixins/visibility";
 
 /*************
 * Animations *
