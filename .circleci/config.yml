@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:  
+ 
+    docker:
+      - image: monosolutions/node:1.0.2
+    steps:
+      - checkout   
+      - run:
+          name: Dependencies
+          command: npm install
+     
+      - run:
+          name: Build
+          command: npm run build
+                  
+      - run:
+          name: deploy 
+          command: |      
+            aws configure set aws_access_key_id "${AWS_DEV_ACCESS_KEY}"
+            aws configure set aws_secret_access_key "${AWS_DEV_SECRET_KEY}"   
+            BUCKET="mono-cdn"
+            {
+                aws s3api create-bucket --bucket "${BUCKET}"
+                } || {
+                echo "Bucket is there"
+            }
+
+            aws s3 cp "./animations.css" "s3://${BUCKET}/animations.css"
+            aws s3 cp "./js/css3-animate-it.js" "s3://${BUCKET}/animations.js"
+          
+
+    
