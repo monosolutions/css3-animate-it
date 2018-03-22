@@ -9,7 +9,7 @@
     "animate"
   ],
   "scripts": {
-    "build": "lessc --compress ./less/animations.less ./animations.css && uglifyjs ./js/css3-animate-it.js  -o ./animations.js -c -m"
+    "build": "lessc --compress ./less/animations.less ./animations.css && uglifyjs ./js/css3-animate-it.js  -o ./animations.js -c "
   },
   "version": "1.0.3",
   "author": {
