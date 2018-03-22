@@ -8,8 +8,8 @@
     "plugins",
     "animate"
   ],
-  "scripts":{
-    "build": "lessc ./less/animations.less ./animations.css"
+  "scripts": {
+    "build": "lessc --compress ./less/animations.less ./animations.css && uglifyjs ./js/css3-animate-it.js  -o ./animations.js -c -m"
   },
   "version": "1.0.3",
   "author": {
@@ -28,6 +28,7 @@
   "download": "https://github.com/Jack-McCourt/css3-animate-it.git",
   "dependencies": {
     "jquery": ">=1.4",
-    "less": "^3.0.1"
+    "less": "^3.0.1",
+    "uglify-js": "^3.3.16"
   }
 }

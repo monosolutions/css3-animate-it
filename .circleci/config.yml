@@ -27,7 +27,7 @@ jobs:
             }
 
             aws s3 cp "./animations.css" "s3://${BUCKET}/animations.css"
-            aws s3 cp "./js/css3-animate-it.js" "s3://${BUCKET}/animations.js"
+            aws s3 cp "./animations.js" "s3://${BUCKET}/animations.js"
           
 
     
